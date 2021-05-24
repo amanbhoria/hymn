@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/logstyle.css">
+  <!-- FontAwesome icons -->
+  <script src="https://kit.fontawesome.com/9dab1c515d.js" crossorigin="anonymous"></script>
+  <!-- Font Styles -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+  <!-- javaScript -->
+  <!-- <script type="text/javascript" src="login.js"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <title></title>
+</head>
+
+<body>
+  <div class="hero">
+        <div class="form-box">
+          <div class="button-box">
+            <div id="btn"></div>
+            <button type="button" name="button" class="toggle-btn" onclick="login()">Login</button>
+            <button type="button" name="button" class="toggle-btn" onclick="register()">Register</button>
+          </div>
+        </div>
+    <div class="social-icons">
+      <img src="loginImages/facebook.png" alt="">
+      <img src="loginImages/gmail.png" alt="">
+      <img src="loginImages/twitter.png" alt="">
+      <!-- <i class="fab fa-instagram"></i>
+      <i class="fab fa-facebook-f"></i>
+      <i class="far fa-envelope-open"></i> -->
+    </div>
+    <form id="login" class="input-group" action="/login" method="post">
+      <input type="text" name="User Id" value="" placeholder="username" class="input-field" required>
+      <input type="password" name="password" value="" placeholder="password" class="input-field" required>
+      <input type="checkbox" name="" value="" class="check-box"><span>Remember Password</span>
+      <button type="submit" class="submit-btn upper-button" name="button">Login</button>
+    </form>
+    <form id="register" class="input-group" action="/register" method="post">
+      <input type="text" placeholder="Enter username" class="input-field" required>
+      <input type="email" name="Email" placeholder="Enter email" required>
+      <input type="password" name="password" placeholder="Enter password" class="input-field" required>
+      <input type="checkbox" name="" class="check-box"><span style="bottom: 65px;">I agree to the terms & conditions.</span>
+      <button type="submit" class="submit-btn" name="button">Register</button>
+    </form>
+  </div>
+  <script>
+  var x = document.getElementById("login");
+  var y = document.getElementById("register");
+  var z = document.getElementById("btn");
+
+  function register() {
+    x.style.left = "210px";
+    y.style.left = "610px";
+    z.style.left = "110px";
+  }
+
+  function login() {
+    x.style.left = "610px";
+    y.style.left = "1010px";
+    z.style.left = "0px";
+  }
+  </script>
+</body>
+
+</html>
