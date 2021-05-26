@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/logstyle2.css">
+  <!-- FontAwesome icons -->
+  <script src="https://kit.fontawesome.com/9dab1c515d.js" crossorigin="anonymous"></script>
+  <!-- Font Styles -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+  <!-- Bootstrap-Cdn -->
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
+  <!-- javaScript -->
+  <!-- <script type="text/javascript" src="login.js"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <title>login</title>
+</head>
+
+<body>
+  <!-- <div class="hero">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">HYMN</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Top Charts</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">New Music</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li> -->
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="hero">
+        <div class="form-box">
+          <div class="button-box">
+            <div id="btn"></div>
+            <button type="button" name="button" class="toggle-btn" onclick="login()">Login</button>
+            <button type="button" name="button" class="toggle-btn" onclick="register()">Register</button>
+          </div>
+        
+    <div class="social-icons">
+      <img src="img/loginImages/facebook.png" alt=""> 
+      <img src="img/loginImages/gmail.png" alt="">
+      <img src="img/loginImages/twitter.png" alt="">
+      <!-- <i class="fab fa-instagram"></i>  Login file
+      <i class="fab fa-facebook-f"></i>
+      <i class="far fa-envelope-open"></i> -->
+    </div>
+    <form id="login" class="input-group" action="/" method="post">
+      <input type="text" name="User Id" value="" placeholder="username" class="input-field" required>
+      <input type="password" name="password" value="" placeholder="password" class="input-field" required>
+      <input type="checkbox" name="" value="" class="check-box"><span>Remember Password</span>
+      <button type="submit" class="submit-btn upper-button" name="button">Login</button>
+    </form>
+    <form id="register" class="input-group" action="/register" method="post">
+      <input type="text" name="username" placeholder="Enter username" class="input-field" required>
+      <input type="email" name="email" placeholder="Enter email" required>
+      <input type="password" name="password" placeholder="Enter password" class="input-field" required>
+      <input type="checkbox" name="checkBox" class="check-box"><span style="bottom: 65px;">I agree to the terms & conditions.</span>
+      <button type="submit" class="submit-btn" name="submit">Register</button>
+    </form>
+   </div>
+  </div>
+  <script>
+  var x = document.getElementById("login");
+  var y = document.getElementById("register");
+  var z = document.getElementById("btn");
+
+  function register() {
+    x.style.left = "-400px";
+    y.style.left = "50px";
+    z.style.left = "110px";
+  }
+
+  function login() {
+    x.style.left = "50px";
+    y.style.left = "450px";
+    z.style.left = "0px";
+  }
+  </script>
+  <div id="cursor"></div> 
+  <script>
+    var cursor = document.getElementById("cursor");
+    document.onmousemove = function(e) {
+    cursor.style.left = (e.pageX - 25) + "px";
+    cursor.style.top = (e.pageY - 25) + "px";
+    cursor.style.display = "block";
+    }
+  </script>
+</body>
+
+</html>

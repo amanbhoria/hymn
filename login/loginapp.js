@@ -3,11 +3,8 @@ const app = express()
 const bodyParser = require("body-parser")
 const path = require("path")
 const port = process.env.PORT || 3000;
-<<<<<<< HEAD
-=======
 
 require("./db/conn")
->>>>>>> c1062bd (login accessible)
 // const mongoose = require("mongoose")
 // const { allowedNodeEnvironmentFlags } = require("process")
 

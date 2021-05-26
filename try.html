@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr"> 
   <head>
     <meta charset="utf-8">
     <title>Hymn-Music Player</title>
@@ -7,6 +7,7 @@
     <!-- Font Styles -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Mystery+Quest&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
     <!-- Bootstrap-Cdn -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <!-- FontAwesome icons -->
@@ -50,32 +51,35 @@
      <a href="#" class="anchor-tags">Home</a>
    <!-- <div> -->
      <!-- <div class="anchors"> -->
-<<<<<<< HEAD
-       <a href="#" class="anchor-tags">About</a>
-=======
+
+       <!-- <a href="#" class="anchor-tags">About</a> -->
+
        <a href="/about" class="anchor-tags">About</a>
->>>>>>> c1062bd (login accessible)
      <!-- <div>
        <div class="anchors"> -->
-          <a href="#" class="anchor-tags">Contact</a>
+          <a href="/contact" class="anchor-tags">Contact</a>
        <!-- <div>
          <div class="anchors"> -->
-         <form class="" action="/login" method="post">
-           <a href="/login" class="anchor-tags">login</a>
-         </form>
+
+         <!-- <form class="" action="/login" method="post"> -->
+           <a href="/login" class="anchor-tags">Login</a>
+
+         <!-- </form> -->
 
          </div>
 
        </section>
 
        <!-- <img src="petals.png" alt=""> -->
+   <section class="">
+     <footer id="footer">
+       <p class="copyright">© Copyright 2021</p>
+       <a href="https://www.instagram.com/parul_rathee/" class="bottom-anchors"><i class="fab fa-instagram"  style="position: relative; left: 690px;"></i></a>
+       <a href="https://www.facebook.com/BecreativeOO7/" class="bottom-anchors"><i class="fab fa-facebook-f" style="position: relative; left: 710px;"></i></a>
+       <a href="https://www.youtube.com/channel/UCkxaCPbmTyds5ta9e1vIxQg" class="bottom-anchors"><i class="fab fa-youtube" style="position: relative; left: 730px;"></i> </i></a>
+       <a href="mailto:Aman.bhoria20@bvicam.in" class="bottom-anchors"><i class="far fa-envelope-open" style="position: relative; left: 750px;"></i></a>
 
-   <footer id="footer">
-     <p class="copyright">© Copyright 2021</p>
-     <a href="https://www.instagram.com/parul_rathee/" class="bottom-anchors"><i class="fab fa-instagram"  style="position: relative; left: 690px;"></i></a>
-     <a href="https://www.facebook.com/BecreativeOO7/" class="bottom-anchors"><i class="fab fa-facebook-f" style="position: relative; left: 710px;"></i></a>
-     <a href="https://www.youtube.com/channel/UCkxaCPbmTyds5ta9e1vIxQg" class="bottom-anchors"><i class="fab fa-youtube" style="position: relative; left: 730px;"></i> </i></a>
-     <a href="mailto:Aman.bhoria20@bvicam.in" class="bottom-anchors"><i class="far fa-envelope-open" style="position: relative; left: 750px;"></i></a>
+   </section>
 
   </footer>
   <script>
@@ -83,5 +87,15 @@
     //   window.open(__dirname+"/login.html");
     // }
   </script>
-  </body>
+<!-- --------------------------------------cursor style----------------- -->
+ <div id="cursor"></div> 
+  <script>
+    var cursor = document.getElementById("cursor");
+    document.onmousemove = function(e) {
+    cursor.style.left = (e.pageX - 25) + "px";
+    cursor.style.top = (e.pageY - 25) + "px";
+    cursor.style.display = "block";
+    }
+  </script> 
+</body>
 </html>

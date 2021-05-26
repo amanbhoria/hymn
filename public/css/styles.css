@@ -2,6 +2,7 @@ body {
   background-color: #E4E9FD;
   background-image: -webkit-linear-gradient(65deg, #150e56 100%, #f8f5f1 30%);
   min-height: 1000px;
+  /* cursor: grab; */
 }
 
 .box {
@@ -17,6 +18,8 @@ body {
   margin-left: 230px;
     margin-right: 230px;
     background-color: #f8f5f1;
+    position: relative;
+    z-index: 2;
 }
 
 
@@ -39,6 +42,8 @@ body {
 #footer {
   margin-top: 200px;
   color: white;
+  position: relative;
+  z-index: 2;
 }
 
 .anchor-tags {
@@ -55,6 +60,8 @@ i:hover {
 .anchors {
   text-align: center;
   text-decoration: none;
+  position: relative;
+  z-index: 2;
 }
 
 .bottom-anchors {
@@ -66,4 +73,25 @@ text-align: center;
     font-size: 20px;
     margin-top: 20px;
     color: white;
+}
+
+#cursor {
+  height: 50px;
+  width: 50px;
+  background: #f7fd04;
+  position : absolute;
+  border-radius: 50%;
+  transition: 0.5s;
+  opacity: 50%;
+  
+  transition-timing-function: ease-out;
+}
+
+div:hover ~ #cursor {
+  transform : scale(0.5);
+  opacity: 70%;
+}
+
+#footer:hover ~ #cursor {
+  transform : scale(0.5);
 }
