@@ -41,8 +41,6 @@ app.set("views",template_path)
 
 const navbarPath = path.join(__dirname+"/views")
 
-// 
-
 app.use(bodyParser.urlencoded({extended : false}));
 app.use(express.json());
 app.use(express.static("public"))
@@ -53,9 +51,13 @@ app.get("/",(req,res) => {
   res.sendFile(__dirname+"/try.html")
 })
 
+app.get("/home",(req,res) => {
+  res.render(__dirname+"/templates/views/home")
+  //we can't render a sendFile an ejs file.
+})
+
 app.get("/login", (req,res) => {
-  // console.log("login route")
-  res.sendFile(__dirname+"/login/login2.html")
+  res.render(__dirname+"/templates/views/login2")
 })
 
 // 

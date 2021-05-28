@@ -19,5 +19,5 @@ const regSchema = new mongoose.Schema({
 
 //now we need to create the collections
 
-const Register = new mongoose.model("userInfo", regSchema)
+const Register = new mongoose.model("Register", regSchema)
 module.exports = Register;

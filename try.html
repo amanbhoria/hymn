@@ -4,6 +4,9 @@
     <meta charset="utf-8">
     <title>Hymn-Music Player</title>
     <link rel="stylesheet" href="css/styles.css">
+
+
+
     <!-- Font Styles -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Mystery+Quest&display=swap" rel="stylesheet">
@@ -13,6 +16,7 @@
     <!-- FontAwesome icons -->
     <script src="https://kit.fontawesome.com/9dab1c515d.js" crossorigin="anonymous"></script>
     <link rel="icon" href="favicon.ico">
+    
   </head>
   <body>
     <!-- Nav-Bar -->
@@ -46,9 +50,9 @@
    <div class="box" id="subheading">
      <h2 style="font-size : 3rem;">Welcome To The Music World</h2>
    </div>
-   <section>
+   <!-- <section> -->
    <div class="anchors">
-     <a href="#" class="anchor-tags">Home</a>
+     <a href="/home" class="anchor-tags">Home</a>
    <!-- <div> -->
      <!-- <div class="anchors"> -->
 
@@ -68,10 +72,10 @@
 
          </div>
 
-       </section>
+       <!-- </section> -->
 
        <!-- <img src="petals.png" alt=""> -->
-   <section class="">
+   <!-- <section class=""> -->
      <footer id="footer">
        <p class="copyright">© Copyright 2021</p>
        <a href="https://www.instagram.com/parul_rathee/" class="bottom-anchors"><i class="fab fa-instagram"  style="position: relative; left: 690px;"></i></a>
@@ -79,7 +83,7 @@
        <a href="https://www.youtube.com/channel/UCkxaCPbmTyds5ta9e1vIxQg" class="bottom-anchors"><i class="fab fa-youtube" style="position: relative; left: 730px;"></i> </i></a>
        <a href="mailto:Aman.bhoria20@bvicam.in" class="bottom-anchors"><i class="far fa-envelope-open" style="position: relative; left: 750px;"></i></a>
 
-   </section>
+   <!-- </section> -->
 
   </footer>
   <script>
@@ -88,14 +92,39 @@
     // }
   </script>
 <!-- --------------------------------------cursor style----------------- -->
- <div id="cursor"></div> 
-  <script>
-    var cursor = document.getElementById("cursor");
-    document.onmousemove = function(e) {
+<div id="cursor"></div> 
+
+
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+<script>
+  $(document).ready(() => {
+    var cursor = $("#cursor");
+  });
+  
+  // var cursor = document.getElementById("cursor");
+  document.onmousemove = function(e) {
     cursor.style.left = (e.pageX - 25) + "px";
     cursor.style.top = (e.pageY - 25) + "px";
     cursor.style.display = "block";
-    }
+  }
   </script> 
+  
+
+<div class="loader-wrapper">
+    <span class="loader"><span class="loader-inner"></span></span>
+</div>  
+
+  <script>
+   $(window).on("load",function(){
+     $(".loader-wrapper").fadeOut("slow");
+});
+
+  </script>
+
+  
 </body>
 </html>
