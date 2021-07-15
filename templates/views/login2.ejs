@@ -35,9 +35,11 @@
       <i class="fab fa-facebook-f"></i>
       <i class="far fa-envelope-open"></i> -->
     </div>
-    <form id="login" class="input-group" action="/" method="post">
+    <form id="login" class="input-group" action="/login" method="post">
       <input type="text" name="User Id" value="" placeholder="username" class="input-field" required>
-      <input type="password" name="password" value="" placeholder="password" class="input-field" required>
+      <input type="password" name="password" value="" placeholder="password" class="input-field" id="pass" required>
+      <input type="checkbox" onclick="myFunction()"><span style="margin-bottom: 50px;">Show Password</span> 
+      <br>
       <input type="checkbox" name="" value="" class="check-box"><span>Remember Password</span>
       <button type="submit" class="submit-btn upper-button" name="button">Login</button>
     </form>
@@ -80,6 +82,17 @@
     cursor.style.top = (e.pageY - 25) + "px";
     cursor.style.display = "block";
     }
+
+    function myFunction() {
+    var x = document.getElementById("pass");
+    if (x.type === "password") {
+       x.type = "text";
+      } else {
+       x.type = "password";
+    }
+  }
+
+
   </script>
 
 </body>

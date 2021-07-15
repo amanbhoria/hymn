@@ -5,8 +5,30 @@ const bodyParser = require("body-parser")
 const https = require("https")
 const mongoose = require("mongoose")
 const ejs = require("ejs")
-require("./db/conn")
-const Register = require("./models/registers");
+const encrypt = require("mongoose-encryption")
+// require("./db/conn")
+
+const regSchema = new mongoose.Schema({
+  username : {
+      type : String,
+      required : true
+  },
+ email : {
+      type : String,  //It always shows error without type
+      required : true, 
+      unique : true
+  },
+   password : {
+      type : String,
+      required : true,
+   }  
+
+});
+
+//now we need to create the collections
+
+const Register = new mongoose.model("Register", regSchema)
+// const Register = require("./models/registers")
 
 
 const dB = 'mongodb+srv://nickbhoria007:coolboyaman15000@cluster0.1t4pa.mongodb.net/hymndb?retryWrites=true&w=majority'
@@ -53,11 +75,28 @@ app.get("/",(req,res) => {
 
 app.get("/home",(req,res) => {
   res.render(__dirname+"/templates/views/home")
-  //we can't render a sendFile an ejs file.
+  //we can't render a sendFile an ejs file. we only render js file and sendFile html files. 
 })
 
 app.get("/login", (req,res) => {
   res.render(__dirname+"/templates/views/login2")
+})
+
+app.post("/login", (req, res) => {
+    const username = req.body.username;
+    const password = req.body.password;
+
+    User.findOne({email : username}, (err, foundUser) => {
+        if(err) {
+            console.log(err)
+        } else {
+            if (foundUser) {
+                if(foundUser.password === password) {
+                    res.render(__dirname+"/templates/views/home")
+                }
+            }
+        }
+    })
 })
 
 // 
@@ -69,36 +108,38 @@ app.get("/contact",(req, res) => {
   res.render(__dirname+"/templates/views/contact");
 })
 
-app.get("/register", (req,res) => {
-  // res.render("registers");
-  // res.render("list");
-  res.render(__dirname+"/templates/views/list");
-})
-
-app.post("/register", async (req,res) => {
-  try {
-    const registerEmployee = new Register({
-      username : req.body.username,
-      email : req.body.email,
-      password : req.body.password
-    })
-    const registered = await registerEmployee.save()
-    res.status(201).render(__dirname+"/templates/views/list");
-  } catch(error) {
-    res.status(400).send(error);
-  }
-
-})
-//koi issue hai kyaa yahan pe?hm
-// 
-// const request = https.request(url, option, function(response){
-//
-//     if (response.statusCode === 200) {
-//       res.sendFile(__dirname + "/success.html")
-//     }   else {
-//           console.log("Error!")
-//   }
+// app.get("/register", (req,res) => {
+//   res.render(__dirname+"/templates/views/list");
 // })
+
+app.post("/register", (req,res) => {
+  const registerEmployee = new Register({
+    username : req.body.username,
+    email : req.body.email,
+     password : req.body.password})
+  registerEmployee.save()
+  res.render(__dirname+"/templates/views/list")
+})
+
+
+
+
+
+// app.post("/register", async (req,res) => {
+//   try {
+//     const registerEmployee = new Register({
+//       username : req.body.username,
+//       email : req.body.email,
+//       password : req.body.password
+//     })
+//     const registered = await registerEmployee.save()
+//     res.status(201).render(__dirname+"/templates/views/list");
+//   } catch(error) {
+//     res.status(400).send(error);
+//   }
+// }
+
+
 
 app.listen(3000,() => {
   console.log("The server has started")

@@ -23,6 +23,8 @@
     "express": "^4.17.1",
     "install": "^0.13.0",
     "mongoose": "^5.12.10",
+    "mongoose-encryption": "^2.1.0",
+    "nodemon": "^2.0.9",
     "path": "^0.12.7"
   }
 }
