@@ -18,6 +18,7 @@ html { overflow:auto; } body {overflow: auto; }
   height : 100%;
   width : 100%;
   background-image: -webkit-linear-gradient(65deg, #150e56 100%, #f8f5f1 30%);
+  /* background-image: -webkit-linear-gradient(65deg, #10375C 100%, #f8f5f1 30%); */
   /* background-image: url(petals.jpg);  */
   background-position: center;
   background-size : cover;
@@ -148,10 +149,10 @@ span {
 #cursor {
   height: 50px;
   width: 50px;
-  background: #511281;
+  background: #F9F9F9;
   position : absolute;
   border-radius: 50%;
-  transition: 0.5s;
+  transition: 0.1s;
   opacity: 50%;
   
   transition-timing-function: ease-out;
