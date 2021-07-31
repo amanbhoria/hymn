@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/a2b3da0c65.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" 
+    rel="stylesheet">
     <link rel="stylesheet" href="css/Homestyle.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Music Player</title>
@@ -37,14 +38,15 @@
                 <span id="durationtimetext" class="right">00:00</span>
             </div> -->
             <div class="progress-bar">
-                <input type="range" name="" id="seekslider" class="seekslider" min="0" max="100" value="0" step="1">
+                <input type="range" name="" id="seekslider" class="seekslider" min="0" 
+                max="100" value="0" step="1">
             </div>
         <!-- </div> -->
         <ul class="buttons">
             <span id="random" class="shuffle button button-sm">
                 <i class="fas fa-random fa-sm"></i>
             </span>
-            <span id="prevbtn" class="prev button button-md">
+            <span id="prevbtn" class="prev button button-m  d">
                 <i class="fas fa-step-backward"></i>
             </span>
             <span id="playpausebtn" class="playpause button button-lg">
@@ -76,11 +78,19 @@ durationtimetext , playlist_status ,
 dir , playlist , ext , agent , playlists_artists , repeat , random;
 
 dir = "songs/"; 
-playlist = ["Cartoon - On & On" , "4th Dimension (feat. Louis Prima)", "Stereo Love", "Hardwell feat. Jason Derulo - Follow Me", "Diviners-X-Riell-Slow" , "InfiNoise-Sunlight","Jone - Everything","Last Heroes x TwoWorldsApart - Eclipse","Lost Sky - Fearless pt.II","Xaia, Rain Man, Oly - Breakdown"]
+playlist = ["Cartoon - On & On" , "4th Dimension (feat. Louis Prima)", "Stereo Love",
+ "Hardwell feat. Jason Derulo - Follow Me", "Diviners-X-Riell-Slow" , 
+"InfiNoise-Sunlight","Jone - Everything","Last Heroes x TwoWorldsApart - Eclipse",
+"Lost Sky - Fearless pt.II","Xaia, Rain Man, Oly - Breakdown"]
 
-title =["Cartoon - On & On", "4th Dimension" , "Stereo Love", "Follow me", "Slow" , "Sunlight", "Everything","Last Heroes","Fearless","Breakdown"]
-poster=["img/images/1.jpg", "img/images/0.jpg", "img/images/1-.jpg", "img/images/1-2.jpg","img/images/2.jpg", "img/images/3.jpg","img/images/4.jpg","img/images/5.jpg","img/images/6.jpg","img/images/7.jpg"]
-artists=[ "Daniel Levi", "Kids see ghosts", "Edward Maya", "Hardwell Ft. Jason Derulo", "Diviners-X-Riell","Nilka","Jone","AERYN","Chris Linton","Xaia, Rain Man, Oly"]
+title =["Cartoon - On & On", "4th Dimension" , "Stereo Love", 
+"Follow me", "Slow" , "Sunlight", "Everything","Last Heroes","Fearless","Breakdown"]
+poster=["img/images/1.jpg", "img/images/0.jpg", "img/images/1-.jpg", "img/images/1-2.jpg",
+"img/images/2.jpg", "img/images/3.jpg","img/images/4.jpg","img/images/5.jpg",
+"img/images/6.jpg","img/images/7.jpg"]
+artists=[ "Daniel Levi", "Kids see ghosts", "Edward Maya", "Hardwell Ft. Jason Derulo", 
+-"Diviners-X-Riell",
+"Nilka","Jone","AERYN","Chris Linton","Xaia, Rain Man, Oly"]
 
 playlist_index = 0;
 
@@ -121,10 +131,6 @@ audio.addEventListener("ended",function(){
 });
 repeat.addEventListener("click",loop);
 randomSong.addEventListener("click",random);
-
-
-
-
 //functions
 
 function fetchMusicDetail(){
@@ -198,37 +204,6 @@ function switchTrack(){
     fetchMusicDetail();
 }
 
-// function seek(event){
-//     if(audio.duration == 0){
-//         null
-//     }else{
-//         if(seeking){
-//             seekslider.value = event.clientX - seekslider.offsetLeft;
-//             seekto = audio.duration * (seekslider.value / 100);
-//             audio.currentTime = seekto;
-//         }
-//     }
-// }
-
-// function seektimeupdate(){
-//     if(audio.duration){
-//         var nt = audio.currentTime * (100 / audio.duration);
-//         seekslider.value = nt;
-//         var curmins = Math.floor(audio.currentTime / 60); 
-//         var cursecs = Math.floor(audio.currentTime - curmins * 60); 
-//         var durmins = Math.floor(audio.duration / 60); 
-//         var dursecs = Math.floor(audio.duration - durmins * 60); 
-//         if(cursecs < 10){ cursecs = "0"+cursecs; }
-//         if(dursecs < 10){ dursecs = "0"+dursecs; }
-//         if(curmins < 10){ curmins = "0"+curmins; }
-//         if(durmins < 10){ durmins = "0"+durmins; }
-//         currenttimetext.innerHTML = curmins+":"+cursecs;
-//         durationtimetext.innerHTML = durmins+":"+dursecs;
-//     }else{
-//         currenttimetext.innerHTML = "00"+":"+"00";
-//         durationtimetext.innerHTML = "00"+":"+"00";
-//     }
-// }
 
 let checkbox = document.querySelector('input[name=theme]');
 checkbox.addEventListener('change',function(){
@@ -240,11 +215,7 @@ checkbox.addEventListener('change',function(){
 })
 //volume slider
 
-
-
-
-
-    </script>
+ </script>
 </body>
 </html>
 <%- include("footer") -%>
