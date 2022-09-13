@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"> 
+  <head>
+    <meta charset="utf-8">
+    <title>Hymn-Music Player</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+
+
+    <!-- Font Styles -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mystery+Quest&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Loop&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet"> -->
+    <!-- Bootstrap-Cdn -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- FontAwesome icons -->
+    <script src="https://kit.fontawesome.com/9dab1c515d.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="favicon.ico">
+    
+  </head>
+  <body>
+    <!-- Nav-Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">HYMN</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" 
+  aria-controls="navbarNav"
+  aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#"> <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"></a>
+      </li>
+      <!-- <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li> -->
+    </ul>
+  </div>
+</nav>
+<!-- Parul is mad -->
+
+   <div class="box" id="heading">
+     <h1>HYMN</h1>
+   </div>
+   <div class="box" id="subheading">
+     <h2 style="font-size : 3rem;">Welcome To The Music World</h2>
+   </div>
+   <!-- <section> -->
+   <div class="anchors">
+     <a href="/home" class="anchor-tags">Home</a>
+   <!-- <div> -->
+     <!-- <div class="anchors"> -->
+
+       <!-- <a href="#" class="anchor-tags">About</a> -->
+
+       <a href="/about" class="anchor-tags">About</a>
+     <!-- <div>
+       <div class="anchors"> -->
+          <a href="/contact" class="anchor-tags">Contact</a>
+       <!-- <div>
+         <div class="anchors"> -->
+
+         <!-- <form class="" action="/login" method="post"> -->
+           <a href="/login" class="anchor-tags">Login</a>
+
+         <!-- </form> -->
+
+         </div>
+
+       <!-- </section> -->
+
+       <!-- <img src="petals.png" alt=""> -->
+   <!-- <section class=""> -->
+     <footer id="footer">
+       <p class="copyright">© Copyright 2021</p>
+       <a href="https://www.instagram.com/be_creative007/" class="bottom-anchors">
+        <i class="fab fa-instagram"  style="position: relative; left: 690px;"></i></a>
+       <a href="https://www.facebook.com/BecreativeOO7/" class="bottom-anchors">
+        <i class="fab fa-facebook-f" style="position: relative; left: 710px;"></i></a>
+       <a href="https://www.youtube.com/channel/UCkxaCPbmTyds5ta9e1vIxQg" class="bottom-anchors">
+        <i class="fab fa-youtube" style="position: relative; left: 730px;"></i> </i></a>
+       <a href="mailto:Aman.bhoria20@bvicam.in" class="bottom-anchors">
+         <i class="far fa-envelope-open" style="position: relative; left: 750px;"></i></a>
+
+   <!-- </section> -->
+
+  </footer>
+  <script>
+    // function pageChange() {
+    //   window.open(__dirname+"/login.html");
+    // }
+  </script>
+<!-- --------------------------------------cursor style----------------- -->
+<!-- <div id="cursor"></div>  -->
+
+
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+<script>
+  $(document).ready(() => {
+    var cursor = $("#cursor");
+  });
+  
+  // var cursor = document.getElementById("cursor");
+  document.onmousemove = function(e) {
+    cursor.style.left = (e.pageX - 25) + "px";
+    cursor.style.top = (e.pageY - 25) + "px";
+    cursor.style.display = "block";
+  }
+  </script> 
+  
+
+<div class="loader-wrapper">
+    <span class="loader"><span class="loader-inner"></span></span>
+</div>  
+
+  <script>
+   $(window).on("load",function(){
+     $(".loader-wrapper").fadeOut("slow");
+});
+
+  </script>
+
+  
+</body>
+</html>
