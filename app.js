@@ -7,6 +7,7 @@ const mongoose = require("mongoose")
 const ejs = require("ejs")
 const encrypt = require("mongoose-encryption")
 // require("./db/conn")
+const PORT = process.env.PORT || 3000;
 
 const regSchema = new mongoose.Schema({
   username : {
@@ -146,6 +147,6 @@ app.post("/register", (req,res) => {
 
 
 
-app.listen(3000,() => {
+app.listen(PORT,() => {
   console.log("The server has started")
 })
